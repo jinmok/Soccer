@@ -4,7 +4,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.administrator.myapplication.MainActivity2Activity">
+    tools:context="com.example.administrator.myapplication.MainActivity2Activity"
+    android:background="#ff5ec9ff">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -27,12 +28,24 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Choose a Player:"
+                        android:id="@+id/textViewChoosePlayer"
+                        android:textSize="25dp"
+                        android:layout_gravity="center_horizontal" />
 
                     <ScrollView
                         android:layout_width="match_parent"
                         android:layout_height="147dp"
-                        android:id="@+id/scrollView2" >
+                        android:id="@+id/scrollPlayers"
+                        android:layout_weight="0.41"
+                        android:layout_gravity="center_horizontal">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -172,26 +185,20 @@
                         <Button
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:text="Add Player"
-                            android:id="@+id/button2"
+                            android:text="+ Add To Team"
+                            android:id="@+id/AddToTeam"
                             android:layout_gravity="center_horizontal"
-                            android:textSize="30dp" />
+                            android:textSize="30dp"
+                            android:background="#ff72ff5c" />
 
                         <Button
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:text="Remove Player"
-                            android:id="@+id/button3"
+                            android:text="- Remove from Team"
+                            android:id="@+id/RemoveFromTeam"
                             android:layout_gravity="center_horizontal"
-                            android:textSize="30dp" />
-
-                        <Button
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Switch Players"
-                            android:id="@+id/button4"
-                            android:layout_gravity="center_horizontal"
-                            android:textSize="30dp" />
+                            android:textSize="30dp"
+                            android:background="#ffff6961" />
 
                         <Button
                             style="?android:attr/buttonStyleSmall"
@@ -215,10 +222,11 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="341dp"
+                        android:layout_height="341dp"
                         android:id="@+id/imageView"
-                        android:layout_gravity="center_horizontal" />
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/emptyprofile" />
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -229,65 +237,72 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="First Name:"
-                            android:id="@+id/firstname"
+                            android:text="Name:"
+                            android:id="@+id/textName"
                             android:layout_gravity="center_horizontal"
                             android:layout_weight="1"
-                            android:textSize="25dp" />
+                            android:textSize="25dp"
+                            android:textColor="#ff000000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Last Name:"
-                            android:id="@+id/lastname"
+                            android:text="Position:"
+                            android:id="@+id/textPosition"
                             android:layout_gravity="center_horizontal"
                             android:layout_weight="1"
-                            android:textSize="25dp" />
+                            android:textSize="25dp"
+                            android:textColor="#ff000000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Team:"
-                            android:id="@+id/team"
+                            android:id="@+id/textTeam"
                             android:layout_gravity="center_horizontal"
                             android:layout_weight="1"
-                            android:textSize="25dp" />
+                            android:textSize="25dp"
+                            android:textColor="#ff000000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Uniform:"
-                            android:id="@+id/uniform"
+                            android:id="@+id/textUniform"
                             android:layout_gravity="center_horizontal"
                             android:layout_weight="1"
-                            android:textSize="25dp" />
+                            android:textSize="25dp"
+                            android:textColor="#ff000000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Height:"
-                            android:id="@+id/height"
+                            android:id="@+id/textHeight"
                             android:layout_gravity="center_horizontal"
                             android:layout_weight="1"
-                            android:textSize="25dp" />
+                            android:textSize="25dp"
+                            android:textColor="#ff000000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Weight:"
-                            android:id="@+id/weight"
+                            android:id="@+id/textWeight"
                             android:layout_gravity="center_horizontal"
                             android:layout_weight="1"
-                            android:textSize="25dp" />
+                            android:textSize="25dp"
+                            android:textColor="#ff000000" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Goals"
-                            android:id="@+id/goals"
+                            android:id="@+id/textGoals"
                             android:layout_gravity="center_horizontal"
                             android:layout_weight="1"
-                            android:textSize="25dp" />
+                            android:textSize="25dp"
+                            android:textColor="#ff000000" />
                     </LinearLayout>
 
                 </LinearLayout>

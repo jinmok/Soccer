@@ -22,26 +22,19 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     Button AddPerson;
     Button GoOn;
-    Button GoBack;
+    Button RemovePerson;
+    Button Team1;
+    Button Team2;
+    Button customTeam;
 
 
-    EditText iFirstNameOfPerson;
-    EditText iLastNameOfPerson;
-    EditText iTeamOfPerson;
-    EditText iUniformOfPerson;
-    EditText iHeightOfPerson;
-    EditText iWeightOfPerson;
-    EditText iGoalsOfPerson;
+    TextView textTeamName;
+    TextView textGoals;
+    TextView textShots;
+    TextView textFouls;
+    TextView textMembers;
 
-    TextView oFirstNameOfPerson;
-    TextView oLastNameOfPerson;
-    TextView oTeamOfPerson;
-    TextView oUniformOfPerson;
-    TextView oHeightOfPerson;
-    TextView oWeightOfPerson;
-    TextView oGoalsOfPerson;
-
-    Spinner PersonSpinner;
+    //Spinner PersonSpinner;
 
     ArrayList<String> course;
 
@@ -106,27 +99,21 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         AddPerson = (Button) findViewById(R.id.AddPerson);
         AddPerson.setOnClickListener(this);
 
-        GoOn = (Button) findViewById(R.id.GoOn);
-        GoOn.setOnClickListener(this);
+        Team1 = (Button) findViewById(R.id.Team1);
+        Team1.setOnClickListener(this);
 
-        //GoBack = (Button) findViewById(R.id.GoBack);
-        //GoBack.setOnClickListener(this);
+        Team2 = (Button) findViewById(R.id.Team2);
+        Team2.setOnClickListener(this);
 
-//        iFirstNameOfPerson = (EditText) findViewById(R.id.iFirstNameOfPerson);
-//        iLastNameOfPerson = (EditText) findViewById(R.id.iLastNameOfPerson);
-//        iTeamOfPerson = (EditText) findViewById(R.id.iTeamOfPerson);
-//        iUniformOfPerson = (EditText) findViewById(R.id.iUniformOfPerson);
-//        iHeightOfPerson = (EditText) findViewById(R.id.iHeightOfPerson);
-//        iWeightOfPerson = (EditText) findViewById(R.id.iWeightOfPerson);
-//        iGoalsOfPerson = (EditText) findViewById(R.id.iGoalsOfPerson);
-//
-//        oFirstNameOfPerson = (TextView) findViewById(R.id.oFirstNameOfPerson);
-//        oLastNameOfPerson = (TextView) findViewById(R.id.oLastNameOfPerson);
-//        oTeamOfPerson = (TextView) findViewById(R.id.oTeamOfPerson);
-//        oUniformOfPerson = (TextView) findViewById(R.id.oUniformOfPerson);
-//        oHeightOfPerson = (TextView) findViewById(R.id.oHeightOfPerson);
-//        oWeightOfPerson = (TextView) findViewById(R.id.oWeightOfPerson);
-//        oGoalsOfPerson = (TextView) findViewById(R.id.oGoalsOfPerson);
+        customTeam = (Button) findViewById(R.id.customTeam);
+        customTeam.setOnClickListener(this);
+
+
+        textTeamName = (TextView) findViewById(R.id.textTeamName);
+        textGoals = (TextView) findViewById(R.id.textGoals);
+        textShots = (TextView) findViewById(R.id.textShots);
+        textFouls = (TextView) findViewById(R.id.textFouls);
+        textMembers = (TextView) findViewById(R.id.textMembers);
 //
 //        PersonSpinner = (Spinner) findViewById(R.id.PersonSpinner);
 //        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, course);
@@ -164,11 +151,31 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
             Intent intent = new Intent(MainActivity.this,MainActivity2Activity.class);
 
-            intent.putExtra("testing", "this is my string");
+            //intent.putExtra();
 
             intent.putExtra("person",p1);
 
             intent.putExtra("table",holder);
+
+            startActivityForResult(intent, 100);
+
+        }
+        //if(v == Team1)
+        //show stats
+
+        //if(v == Team2)
+        //show stats
+
+        if(v == AddPerson)
+        {
+
+            Intent intent = new Intent(MainActivity.this,MainActivity2Activity.class);
+
+            //intent.putExtra();
+
+            //intent.putExtra("person",p1);
+
+            //intent.putExtra("table",holder);
 
             startActivityForResult(intent, 100);
 

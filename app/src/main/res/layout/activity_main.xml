@@ -24,6 +24,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="98dp">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Choose a Team:"
+                    android:id="@+id/textViewChooseTeam"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="25dp" />
+
                 <ScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -54,19 +63,12 @@
                         <Button
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:text="Plastic Platypus"
-                            android:id="@+id/Team3"
-                            android:layout_gravity="center_horizontal"
-                            android:textSize="20dp" />
-
-                        <Button
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
                             android:text="New Team"
                             android:id="@+id/customTeam" />
 
                     </LinearLayout>
                 </ScrollView>
+
             </LinearLayout>
 
             <LinearLayout
@@ -74,31 +76,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.11"
-                android:layout_marginTop="350dp">
+                android:layout_marginTop="400dp">
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Add Player"
+                    android:text="Add/Remove Player"
                     android:id="@+id/AddPerson"
                     android:layout_weight="0"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:background="#ffffffff" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Remove Player"
-                    android:id="@+id/button9"
-                    android:layout_weight="0"
-                    android:textSize="20dp" />
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="View Players"
-                    android:id="@+id/GoOn"
-                    android:layout_weight="0"
-                    android:textSize="20dp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -111,10 +99,12 @@
             android:layout_weight="1">
 
             <ImageView
-                android:layout_width="fill_parent"
+                android:layout_width="384dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView2"
-                android:layout_gravity="center_horizontal" />
+                android:id="@+id/ProfilePic"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/team1logo"
+                android:layout_weight="0.69" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -127,7 +117,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Team Name:"
-                    android:id="@+id/textView"
+                    android:id="@+id/textTeamName"
                     android:layout_gravity="center_horizontal"
                     android:textSize="25dp"
                     android:layout_weight="1"
@@ -137,7 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Goals:"
-                    android:id="@+id/textView2"
+                    android:id="@+id/textGoals"
                     android:layout_gravity="center_horizontal"
                     android:textSize="25dp"
                     android:layout_weight="1"
@@ -147,7 +137,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Shots:"
-                    android:id="@+id/textView3"
+                    android:id="@+id/textShots"
                     android:layout_gravity="center_horizontal"
                     android:textSize="25dp"
                     android:layout_weight="1"
@@ -158,11 +148,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fouls:"
-                    android:id="@+id/textView4"
+                    android:id="@+id/textFouls"
                     android:layout_gravity="center_horizontal"
                     android:textSize="25dp"
                     android:layout_weight="1"
                     android:textColor="#ff000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Members:"
+                    android:id="@+id/textMembers"
+                    android:layout_weight="1"
+                    android:textSize="25dp"
+                    android:textColor="#ff000000"
+                    android:layout_gravity="center_horizontal" />
 
             </LinearLayout>
         </LinearLayout>
