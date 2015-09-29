@@ -36,19 +36,36 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     //Spinner PersonSpinner;
 
-    ArrayList<String> course;
+    //ArrayList<String> course;
 
-    HashMap<String, person> holder;
-    person p1;
-    person p2;
-    person p3;
-    person p4;
-    person p5;
-    person p6;
-    person p7;
-    person p8;
-    person p9;
-    person p10;
+    HashMap<String, SoccerPlayer> playerData;
+    HashMap<String, TeamDB> teamData;
+    SoccerPlayer p1;
+    SoccerPlayer p2;
+    SoccerPlayer p3;
+    SoccerPlayer p4;
+    SoccerPlayer p5;
+    SoccerPlayer p6;
+    SoccerPlayer p7;
+    SoccerPlayer p8;
+    SoccerPlayer p9;
+    SoccerPlayer p10;
+    SoccerPlayer p11;
+    SoccerPlayer p12;
+    SoccerPlayer p13;
+    SoccerPlayer p14;
+    SoccerPlayer p15;
+    SoccerPlayer p16;
+    SoccerPlayer p17;
+    SoccerPlayer p18;
+    SoccerPlayer p19;
+    SoccerPlayer p20;
+
+
+    TeamDB t1 = new TeamDB("Gryffindor");
+    TeamDB t2 = new TeamDB("House Stark");
+    TeamDB t3 = new TeamDB("Middle Earth");
+    TeamDB t4 = new TeamDB("Custom Team");
 
 
     @Override
@@ -56,45 +73,65 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        p1 = new person();
-        p2 = new person();
-        p3 = new person();
-        p4 = new person();
-        p5 = new person();
-        p6 = new person();
-        p7 = new person();
-        p8 = new person();
-        p9 = new person();
-        p10 = new person();
+        p1 = new SoccerPlayer("Harry Potter", "Forward", t1);
+        p2 = new SoccerPlayer("Ron Weasley", "Forward", t1);
+        p3 = new SoccerPlayer("Hermione Granger", "Midfield", t1);
+        p4 = new SoccerPlayer("Neville Longbottom", "Defense", t1);
+        p5 = new SoccerPlayer("Albus Dumbledore", "Goalkeeper", t1);
+        p6 = new SoccerPlayer("John Snow", "Forward", t2);
+        p7 = new SoccerPlayer("Arya Stark", "Defense", t2);
+        p8 = new SoccerPlayer("Sansa Stark", "Defense", t2);
+        p9 = new SoccerPlayer("Brandon Stark", "Midfield", t2);
+        p10 = new SoccerPlayer("Eddard Stark", "Goalkeeper", t2);
+        p11 = new SoccerPlayer("Frodo Baggins", "Forward", t3);
+        p12 = new SoccerPlayer("Samwise Gamgee", "Forward", t3);
+        p13 = new SoccerPlayer("Legolas Greenleaf", "Defense", t3);
+        p14 = new SoccerPlayer("Peregrin Pippin Took", "Defense", t3);
+        p15 = new SoccerPlayer("Meriadoc Merry Brandybuck", "GoalKeeper", t3);
+        p16 = new SoccerPlayer("Katniss Everdeen", "Forward", t4);
+        p17 = new SoccerPlayer("Peeta Mellark", "Forward", t4);
+        p18 = new SoccerPlayer("Gale Something", "Midfield", t4);
+        p19 = new SoccerPlayer("Effie Trinket", "Defense", t4);
+        p20 = new SoccerPlayer("Haymitch Something", "GoalKeeper", t4);
 
 
         //p1.name = "Frodo Baggins";
         //p1.stat1 = "0";
 
-        course = new ArrayList<String>();
-        course.add("Players");
-        course.add("Frodo");
-        course.add("Harry");
-        course.add("Michael");
-        course.add("Gandalf");
-        course.add("Ron");
-        course.add("Samwise");
-        course.add("Tom");
-        course.add("Hodor");
-        course.add("John");
-        course.add("Daenerys");
+//        course = new ArrayList<String>();
+//        course.add("Players");
+//        course.add("Frodo");
+//        course.add("Harry");
+//        course.add("Michael");
+//        course.add("Gandalf");
+//        course.add("Ron");
+//        course.add("Samwise");
+//        course.add("Tom");
+//        course.add("Hodor");
+//        course.add("John");
+//        course.add("Daenerys");
 
-        holder = new HashMap<String, person>();
-        holder.put("Frodo Baggins", p1);
-        holder.put("Harry Potter", p2);
-        holder.put("Michael Jordan", p3);
-        holder.put("Gandalf White", p4);
-        holder.put("Ron Weasley", p5);
-        holder.put("Samwise Gamgee", p6);
-        holder.put("Tom Riddle", p7);
-        holder.put("Hodor Hodor", p8);
-        holder.put("John Snow", p9);
-        holder.put("Daenerys Targaryen", p10);
+        playerData = new HashMap<String, SoccerPlayer>();
+        playerData.put("Harry", p1);
+        playerData.put("Ron", p2);
+        playerData.put("Hermione", p3);
+        playerData.put("Neville", p4);
+        playerData.put("Albus", p5);
+        playerData.put("Frodo", p6);
+        playerData.put("Samwise", p7);
+        playerData.put("Legolas", p8);
+        playerData.put("Pippin", p9);
+        playerData.put("Merry", p10);
+        playerData.put("John Snow", p11);
+        playerData.put("Arya", p12);
+        playerData.put("Sansa", p13);
+        playerData.put("Brandon", p14);
+        playerData.put("Eddard", p15);
+        playerData.put("Katniss", p16);
+        playerData.put("Peeta", p17);
+        playerData.put("Gale", p18);
+        playerData.put("Effie", p19);
+        playerData.put("Haymitch", p20);
 
         AddPerson = (Button) findViewById(R.id.AddPerson);
         AddPerson.setOnClickListener(this);
@@ -146,20 +183,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 //            }
 //        }
 
-        if(v == GoOn)
-        {
 
-            Intent intent = new Intent(MainActivity.this,MainActivity2Activity.class);
-
-            //intent.putExtra();
-
-            intent.putExtra("person",p1);
-
-            intent.putExtra("table",holder);
-
-            startActivityForResult(intent, 100);
-
-        }
         //if(v == Team1)
         //show stats
 
